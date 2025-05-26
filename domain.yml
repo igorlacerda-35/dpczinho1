@@ -1,0 +1,22 @@
+version: "3.1"
+
+intents:
+  - informar_regiao
+  - cotacao_produto
+
+slots:
+  regiao:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_ask_regiao:
+    - text: "Qual é a região do cliente?"
+  utter_preco_indisponivel:
+    - text: "Não encontrei o preço desse produto. Pode verificar o código?"
+
+actions:
+  - action_setar_regiao
+  - action_buscar_preco

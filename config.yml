@@ -1,0 +1,14 @@
+language: pt
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+
+policies:
+- name: RulePolicy
+- name: MemoizationPolicy
+assistant_id: 20250526-182246-concrete-recourse
